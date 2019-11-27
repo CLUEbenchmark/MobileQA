@@ -1,0 +1,14 @@
+apply plugin: 'de.undercouch.download'
+
+task downloadLiteModel {
+    def downloadFiles = [
+        'https://6a75-junzeng-uxxxm-1300734931.tcb.qcloud.la/saved_model.tflite?sign=7145fdd683774aca5b792edd1a7e143a&t=1574841773': 'saved_model.tflite',
+    ]
+    downloadFiles.each { key, value ->
+      download {
+          src key
+          dest "$projectDir/src/main/assets/" + value
+          overwrite false
+      }
+    }
+}

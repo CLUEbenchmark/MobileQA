@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name" translatable="false">离线机器阅读理解@CLUE</string>
+  <string name="title_dataset_hint_text" translatable="false">请从列表中选取一篇文章</string>
+  <string name="you_might_want_to_ask" translatable="false">您可能想问的</string>
+  <string name="text_query" translatable="false">输入查询</string>
+  <string name="ask_question" translatable="false">Ask question</string>
+</resources>
