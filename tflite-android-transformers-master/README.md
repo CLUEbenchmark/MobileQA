@@ -12,6 +12,10 @@
 
 我们提供 CMRC2018 Dev中的数据作为示例
 
+真机示例程序[app.arm.apk](https://6a75-junzeng-uxxxm-1300734931.tcb.qcloud.la/app-armeabi-v7a-debug.apk?sign=483115f1519321a8ca59f2428cfe5153&t=1574871565)
+
+虚拟机示例程序[app.x86.apk](https://6a75-junzeng-uxxxm-1300734931.tcb.qcloud.la/app-debug.apk?sign=8e5eb09bcb0c46a525c7b1b8ea328946&t=1574871756)
+
 效果如下
 
 #### 下一步计划
