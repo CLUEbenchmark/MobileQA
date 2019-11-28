@@ -1,87 +1,78 @@
-# TensorFlow Lite Transformers w/ Android demo
 
-Convert Transformers models
-imported from the [🤗 Transformers](https://github.com/huggingface/transformers) library
-and use them on Android. You can also check out our
-[swift-coreml-transformers](https://github.com/huggingface/swift-coreml-transformers) repo
-if you're looking for Transformers on iOS.
 
-## DistilBERT for Question Answering
+####  中文机器阅读理解Andoid客户端Demo
 
-The app contains a demo of the [DistilBERT](https://arxiv.org/abs/1910.01108) model
-(97% of BERT’s performance on GLUE) fine-tuned for Question answering on the SQuAD dataset.
-It provides 48 passages from the dataset for users to choose from.
+#### Tensorflow Lite Transformers Andorid  Chinese Machine Reading Comprehension Demo
 
-![demo gif](media/distilbert_qa.gif "Demo running offline on a Samsung Galaxy S8")
+- 在CMRC中微调的ALBERT[Albert_tiny_google](#)
+- 转换ALBERT to TFLite
+- 离线进行答案预测
 
-### Coming soon: GPT-2, quantization... and much more!
+#### 示例数据
 
----
+我们提供 CMRC2018 Dev中的数据作为示例
 
-## Build the demo app using Android Studio
+真机示例程序[app.arm.apk](https://6a75-junzeng-uxxxm-1300734931.tcb.qcloud.la/app-armeabi-v7a-debug.apk?sign=483115f1519321a8ca59f2428cfe5153&t=1574871565)
 
-### Prerequisites
+虚拟机示例程序[app.x86.apk](https://6a75-junzeng-uxxxm-1300734931.tcb.qcloud.la/app-debug.apk?sign=8e5eb09bcb0c46a525c7b1b8ea328946&t=1574871756)
 
-*   If you don't have already, install
-    [Android Studio](https://developer.android.com/studio/index.html), following
-    the instructions on the website.
-*   Android Studio 3.2 or later.
-*   You need an Android device or Android emulator and Android development
-    environment with minimum API 15.
-*   The `app/libs` directory contains a custom build of
-    [TensorFlow Lite with TensorFlow ops built-in](https://www.tensorflow.org/lite/guide/ops_select),
-    which is used by the app. It results in a bigger binary than the "normal" build but allows
-    compatibility with models such as DistilBERT.
+效果如下
 
-### Building
+#### 下一步计划
 
-*   Open Android Studio, and from the Welcome screen, select `Open an existing
-    Android Studio project`.
-*   From the Open File or Project window that appears, select the directory where you cloned this repo.
-*   You may also need to install various platforms and tools according to error
-    messages.
-*   If it asks you to use Instant Run, click Proceed Without Instant Run.
+开发基于IOS coreml的示例程序
 
-### Running
 
-*   You need to have an Android device plugged in with developer options enabled
-    at this point. See [here](https://developer.android.com/studio/run/device)
-    for more details on setting up developer devices.
-*   If you already have Android emulator installed in Android Studio, select a
-    virtual device with minimum API 15.
-*   Click `Run` to run the demo app on your Android device.
 
-## Build the demo using gradle (command line)
+#### 基于Android的开发流程
 
-### Building and Installing
+##### 前提
 
-*   Use the following command to build a demo apk:
+- 安装 Android Studio （最新） [官网](https://developer.android.com/studio/index.html)
 
-```
-./gradlew build
-```
+- 你应该有一台Android设备，或者 虚拟器（建议修改虚拟机目录，贼大）
 
-*   Use the following command to install the apk onto your connected device:
+  
 
-```
-adb install app/build/outputs/apk/debug/app-debug.apk
-```
+#####  Android Studio步骤
+
+1. 打开 Android Studio  ，依次**File**  >>  **Open an existing Android Studio project**
+2. 等待哈
+3. 选择运行设备，并点击运行
+4. gradle 下载预训练TFlite模型，并自动构建APP，并在目标设备上运行
+
+##### 命令行步骤
+
+1. 切换到当前工作目录，通过以下命令构建
+
+   ```shell
+   ./gradlew build
+   ```
+
+1. 通过**adb**安装应用
+
+   ```shell
+   adb install app/build/outputs/apk/debug/app-debug.apk
+   ```
+
+   
+
+#### 模型转换过程
+
+[doing](#)
 
 ---
 
-## Models generation
+#### 参考
 
-Example scripts used to convert models are available in the `models_generation` directory.
-Please note that they require the nightly version of TensorFlow and might thus be unstable.
+Demo参考TFlite官方例子: [tensorflow/examples](https://github.com/tensorflow/examples)
 
----
+中文预训练ALBERT: [Albert_tiny_google](https://github.com/zhongbin1/bert_tokenization_for_java)
 
-## Credits
+[BERT Tokenization For JAVA](https://github.com/zhongbin1/bert_tokenization_for_java)
 
-The Android app is forked from the `bertqa` example in the
-[tensorflow/examples](https://github.com/tensorflow/examples) repository and uses the same
-tokenizer with DistilBERT.
 
-## License
+
+#### License
 
 [Apache License 2.0](LICENSE)
