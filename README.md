@@ -16,15 +16,15 @@ Targeting to release before Dec 5th. 目标是12月5日前发布。
 
 ## 模型
 
-使用[albert_zh_small](https://github.com/brightmart/albert_zh)预训练模型，额外加上一层全连接做answer span预测
+使用 [albert_zh_small](https://github.com/brightmart/albert_zh) 预训练模型，额外加上一层全连接做answer span预测
 
-### 模型训练
+* 模型训练
 
-​	已完成，待提交
+​		已完成，待提交
 
-### 用tflite转换模型
+* 用tflite转换模型
 
-​	已完成，待提交
+​		已完成，待提交
 
 
 
