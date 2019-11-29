@@ -16,15 +16,13 @@ Targeting to release before Dec 5th. 目标是12月5日前发布。
 
 ## 模型
 
-使用 [albert_zh_small](https://github.com/brightmart/albert_zh) 预训练模型，额外加上一层全连接做answer span预测
+使用 [albert_zh_small](https://github.com/brightmart/albert_zh) 预训练模型，额外加上一层全连接做answer span预测。
 
-* 模型训练
+* 在CMRC2018数据集的验证集上，max_seq_len为512的模型得分为F1:75.989, EM:52.097, Average:64.038，max_seq_len为384的模型得分为F1:74.781, EM:51.010, Average:62.895
+* max_seq_len为512的模型使用tflite转换后大小为18M，经测试，该模型在4线程的安卓手机上推理延时为580ms左右，在单线程条件下为1.4s左右。
+* max_seq_len为384的模型使用tflite转换后大小为18M，经测试，该模型在4线程的安卓手机上推理延时为390ms左右，在单线程条件下为930ms左右
 
-​		已完成，待提交
-
-* 用tflite转换模型
-
-​		已完成，待提交
+* 模型训练与模型转换过程见[bert_cn_finetune-master](https://github.com/CLUEbenchmark/MobileQA/tree/master/bert_cn_finetune-master) 
 
 
 
@@ -32,7 +30,9 @@ Targeting to release before Dec 5th. 目标是12月5日前发布。
 
 已完成第一版，详见 [tflite-android-transformers-master](https://github.com/CLUEbenchmark/MobileQA/tree/master/tflite-android-transformers-master) 
 
+效果示例：
 
+![android demo](./media/example.gif)
 
 ## IOS Demo
 
