@@ -40,7 +40,8 @@ Targeting to release before Dec 5th. 目标是12月5日前发布。
 
 ## Updates
 
-2019-11-27: Add first version of Android Demo, details see [tflite-android-transformers-master](https://github.com/CLUEbenchmark/MobileQA/tree/master/tflite-android-transformers-master) 
+* 2019-11-27: Add first version of Android Demo, details see [tflite-android-transformers-master](https://github.com/CLUEbenchmark/MobileQA/tree/master/tflite-android-transformers-master) 
+* 2019-11-29: Add first version of MRC model, details see [bert_cn_finetune-master](https://github.com/CLUEbenchmark/MobileQA/tree/master/bert_cn_finetune-master) 
 
 ## Contribution
 
